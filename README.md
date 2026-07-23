@@ -8,13 +8,13 @@
 
 ---
 
-## 📋 Project Documentation & Criteria Mapping
+##  Project Documentation & Criteria Mapping
 
 This comprehensive documentation details the structural layout, methodology, and implementation pipelines embedded within this project repository, explicitly mapped according to the mandatory evaluation criteria.
 
 ---
 
-## 🔍 Kriteria 1: Memuat Dataset dan Melakukan Exploratory Data Analysis (EDA)
+##  Kriteria 1: Memuat Dataset dan Melakukan Exploratory Data Analysis (EDA)
 The implementation pipeline initializes inside the main Jupyter Notebook (`[Clustering]_Submission_Akhir_BMLP_Putri_Maharani_Fetra5.ipynb`) by conducting a rigorous Exploratory Data Analysis (EDA) layer to evaluate data attributes and distributions:
 * **`head()` Inspection:** Executed directly after loading the raw data matrix to review the first 5 records, verifying correct structural schema alignments, column boundaries, and basic structural sanity.
 * **`info()` Architectural Review:** Invoked to output the exact schema overview, detailing the data type signatures (`int64`, `float64`, `object`), memory footprints, and confirming the total structural size of non-null fields per column vector.
@@ -27,7 +27,7 @@ The implementation pipeline initializes inside the main Jupyter Notebook (`[Clus
 
 ---
 
-## 🛠️ Kriteria 2: Pembersihan dan Pra Pemrosesan Data (Data Preprocessing)
+##  Kriteria 2: Pembersihan dan Pra Pemrosesan Data (Data Preprocessing)
 To prepare the dataset for algorithmic clustering, a robust data cleaning pipeline has been applied:
 * **Missing Value & Duplicate Checks:** Used `isnull().sum()` to systematically inventory null counts per feature vector, combined with `duplicated().sum()` to calculate absolute redundant row duplications across the data frame.
 * **Null Element Mitigation:** Handled incomplete structures by executing `dropna()` to drop invalid entries safely without distorting the global population variance.
@@ -37,7 +37,7 @@ To prepare the dataset for algorithmic clustering, a robust data cleaning pipeli
 
 ---
 
-## 🤖 Kriteria 3: Membangun Model Clustering
+##  Kriteria 3: Membangun Model Clustering
 The clustering section isolates behavioral matrices via unsupervised structural grouping:
 * **Clean Dataset Isolation:** Operates directly on the normalized, cleansed matrices generated from the Kriteria 2 pipeline.
 * **Elbow Method Visualizations:** Integrated `KElbowVisualizer()` to plot distortion metrics across sequential value selections of $K$. This mathematically flags the inflection point ("elbow"), establishing an optimal cluster count that maximizes intra-cluster cohesion and inter-cluster separation.
@@ -46,7 +46,7 @@ The clustering section isolates behavioral matrices via unsupervised structural 
 
 ---
 
-## 📊 Kriteria 4: Interpretasi Hasil Clustering
+##  Kriteria 4: Interpretasi Hasil Clustering
 Post-clustering analysis validates and characterizes the generated user sub-populations:
 * **Descriptive Feature Aggregation:** Calculated full mathematical metrics (**Mean, Min, Max**) across every quantitative attribute grouped by the assigned clusters.
 * **Cluster Characteristic Definition:** Translated mathematical aggregates into concrete descriptive profiles, delineating segments based on spending tendencies, age group distributions, and activity scores.
@@ -54,7 +54,7 @@ Post-clustering analysis validates and characterizes the generated user sub-popu
 
 ---
 
-## 📈 Kriteria 5: Membangun Model Klasifikasi
+##  Kriteria 5: Membangun Model Klasifikasi
 A supervised learning layer is appended to automatically predict and assign cluster labels to incoming user pipelines:
 * **Matrix Splitting:** Deployed `train_test_split()` to separate features from the generated `Target` labels, establishing dedicated training subsets and out-of-sample evaluation test segments.
 * **Decision Tree Architecture:** Evaluated and constructed a supervised `Decision Tree` classifier using `sklearn.tree.DecisionTreeClassifier` to form predictable node-splitting logic.
@@ -62,7 +62,7 @@ A supervised learning layer is appended to automatically predict and assign clus
 
 ---
 
-## 📂 Repository File Structure
+##  Repository File Structure
 ```text
 Submission_Akhir_BMLP_Putri_Maharani_Fetra5/
 ├── [Clustering]_Submission_Akhir_BMLP_Putri_Maharani_Fetra5.ipynb  # Main End-to-End Pipeline
